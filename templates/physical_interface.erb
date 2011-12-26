@@ -1,0 +1,8 @@
+# <%= interface %>
+inet <%= address %> <%= netmask %> <%= broadcast %> 
+<% if ! physical_aliasip.empty? -%>
+<% physical_aliasip.each do |a| -%>
+inet alias <%=a %>
+<% end -%>
+<% end -%>
+

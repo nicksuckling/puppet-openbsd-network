@@ -1,0 +1,7 @@
+# <%= interface %>
+inet <%= carp_address %> <%= carp_netmask %> <%= carp_broadcast %>  vhid <%= carp_vhid %> pass <%= carp_pass %> advbase <%= carp_advbase %> advskew <%= carp_advskew %> carpdev <%= carp_dev %> carppeer <%= carp_peer %> 
+<% if ! carp_aliasip.empty? -%>
+<% carp_aliasip.each do |a| -%>
+inet alias <%=a %>  
+<% end -%>
+<% end -%>
