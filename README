@@ -101,7 +101,7 @@ include openbsd-network::carp_interface
 # Create physical interface for our pfsync
     @openbsd-network::physical_interface::localphysicalinterface { "${hostname}pfsync0":
            interface => "em7",
-           address => "192.168.50.3",
+           address => "192.168.50.2",
            netmask => "255.255.255.0",
            broadcast => "192.168.50.255",
            physical_aliasip => "",
@@ -112,6 +112,6 @@ include openbsd-network::carp_interface
 # Should only have one pfsync device so called only once
  class { "openbsd-network::pfsync_interface": interface => "pfsync0",
           pfsync_dev     => "em7",
-          pfsync_peer    => "192.168.50.2"
+          pfsync_peer    => "192.168.50.3"
       }
 
