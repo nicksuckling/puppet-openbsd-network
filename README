@@ -24,8 +24,9 @@ Clone this repo to a git directory under your Puppet modules directory:
 Usage
 -----
 
-The physical interface should be called as a virtual resource. The following example would add 
-a physical interface em0 and a vlan tagged interface vlan 2 vlan 3 against bnx1 with 2 carped interfaces. 
+The physical interface should be called as a virtual resource. The following example would add
+a physical interface em0 and a vlan tagged interface vlan 2 vlan 3 against bnx1 with 2 carped 
+interfaces. 
 
 node test { 
   #Physical interface
