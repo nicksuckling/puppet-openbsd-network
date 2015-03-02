@@ -23,7 +23,7 @@ Usage
 The physical interface should be called as a virtual resource. The following example
 would add a physical interface em0 and a vlan tagged interface using bnx1 for
 vlan 2 vlan 3 against bnx1 with 2 carped interfaces. 
-
+```puppet
 node test { 
   #Physical interface
 	include openbsd-network::physical_interface
@@ -112,3 +112,4 @@ include openbsd-network::carp_interface
           pfsync_peer    => "192.168.50.3"
       }
 
+```
